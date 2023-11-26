@@ -25,5 +25,4 @@ cursor.execute(query, values)
 conn.commit()
 conn.close()
 
-print(form)
 
