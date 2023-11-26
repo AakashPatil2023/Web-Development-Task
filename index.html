@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="script.js"></script>
+    <title>Web Development Task</title>
+  </head>
+  <body>
+    <div class="container">
+      <form  action="dbconnection.py" method="post" enctype="multipart/form-data"  onsubmit="return formValidation()">
+        <select name="Select Partner" class="option" id="option" >
+          <option value="">Select partner</option>
+          <option value="Full Time">Full Time</option>
+          <option value="Intern">Intern</option>
+          <option value="Associate">Associate</option>
+          <option value="Trainee">Trainee</option>
+        </select>
+        <p id="optionError" class="error"></p>
+        <input class="input" type="text" placeholder="Name" name="name" id="name" >
+        <p id="userError" class="error"></p> 
+        <input class="input" type="email" placeholder="Email" name="email" id="email">
+        <p id="mailError" class="error"></p>
+        <input class="input" type="number" placeholder="Number" name="number" id="number">
+        <p id="numError" class="error"></p>
+        <input class="input" type="text" placeholder="PAN" name="pan" id="pan">
+        <p id="panError" class="error"></p>
+        <input class="input" type="number" placeholder="Pin Code" name="pincode" id="pincode">
+        <p id="pinCodeError" class="error"></p>
+        <input class="input" type="text" placeholder="KYC (PAN or Company PAN)" name="kyc" id="kyc"><br>
+        <p id="kycError" class="error"></p>
+        <input  class="file" type="file" name="file" id="file" accept=".txt, .pdf, .doc">
+        <label for="file">Upload KYC Document</label>
+        <p id="fileError" class="error"></p>
+        <input class="input" type="password" placeholder="Password" name="password" id="password">
+        <p id="passError" class="error"></p>
+        <input class="input" type="password" placeholder="Confirm Password" name="confirmPassword" id="confirmPassword"/><br>
+        <p id="conPassError" class="error"></p>
+        <div  class="g-recaptcha" data-sitekey="6LeCSxwpAAAAAHRsak5j7fkck_XCwDMTi_DgQj9j"></div><br>
+        <input class="ch" type="checkbox" id="checkbox">
+        <span>I have read and accept the <a href="#">Terms and Condition</a></span>
+        <p id="checkboxError" class="error"></p>
+        <input type="submit" value="Submit" class="submit">
+      </form>
+    </div>
+    
+  </body>
+</html>
