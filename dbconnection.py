@@ -17,7 +17,7 @@ try:
     password = form.getvalue("password")
 
     query = "INSERT INTO form (Partner, Name, Email, Number, Pan, PinCode, KYC, file, password) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s)"
-    values = (option, name, email, number, pan, pincode, kyc, file.value, password)
+    values = (option, name, email, number, pan, pincode, kyc, file, password)
 
     cursor.execute(query, values)
 
