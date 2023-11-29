@@ -6,15 +6,15 @@ try:
     cursor = conn.cursor()
 
     form = cgi.FieldStorage()
-    option = form['SelectPartner'].value
-    name = form['name'].value
-    email = form['email'].value
-    number = form['number'].value
-    pan = form['pan'].value
-    pincode = form['pincode'].value
-    kyc = form['kyc'].value
-    file = form['file']
-    password = form['password'].value
+    option = form.getvalue("SelectPartner")
+    name = form.getvalue("name")
+    email = form.getvalue("email")
+    number = form.getvalue("number")
+    pan = form.getvalue("pan")
+    pincode = form.getvalue("pincode")
+    kyc = form.getvalue("Skyc")
+    file = form.getvalue("file")
+    password = form.getvalue("password")
 
     query = "INSERT INTO form (Partner, Name, Email, Number, Pan, PinCode, KYC, file, password) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s)"
     values = (option, name, email, number, pan, pincode, kyc, file.value, password)
